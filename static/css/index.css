@@ -1,0 +1,1014 @@
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: goodTimes;
+  src: url(../fonts/good\ times\ rg.otf);
+}
+
+@font-face {
+  font-family: mundial;
+  src: url(../fonts/mundial-cufonfonts/MundialRegular.otf);
+}
+
+:root {
+  --whitesmoke:#f5f5f5;
+  --primary-color: #acacac;
+  --secondary-color: #06224b;
+  --black: #000;
+  --white: #fff;
+  --steel: #71797e;
+  --steely: #999999;
+}
+
+body {
+  overflow-x: hidden !important;
+  /* overflow-y: hidden !important; */
+  scroll-behavior: smooth;
+  height: 100vh;
+  width: auto;
+  /* padding: 0px 10px; */
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  z-index: 999999;
+  border: none;
+  font-size: 1.2vw;
+  border-radius: 20px;
+  padding: 0.8vw;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: mundial;
+  margin-bottom: 0;
+  color: var(--secondary-color);
+}
+
+p,
+a,
+span {
+  color: var(--black);
+  font-family: mundial;
+}
+/* Global CSS Endss.... */
+
+/* Regular css Startss... */
+
+#my-scrollbar {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden !important;
+  /* background: #f1f1f1; */
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  padding: 0px !important;
+  background: url("../images/home-hero-bg.jpg") no-repeat center center/cover;
+}
+
+.hero-left-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.left-info-link a {
+  color: var(--steel);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.left-info-link {
+  position: absolute;
+  bottom: 4.5vw;
+  left: -3.5vw;
+  rotate: 270deg;
+}
+.left-info-link a {
+  color: var(--white) !important;
+}
+
+.hero-left-title {
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 5vw;
+  /* Default for larger screens */
+  font-weight: bold;
+  margin: auto 0;
+  padding-left: 1.67vw;
+  text-align: right;
+  width: 50%;
+  z-index: 2;
+  font-family: goodTimes;
+}
+
+.hero-right-overlay {
+  position: relative;
+  width: 50%;
+  height: auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  z-index: 1;
+}
+
+.right-text {
+  font-size: 12vw;
+  font-weight: 900;
+  background: url("../images/home-hero-bg.jpg") no-repeat center center;
+  /* -webkit-background-clip: text; */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-attachment: fixed;
+  margin: -9px;
+  text-transform: uppercase;
+  line-height: 0.9;
+  font-family: goodTimes;
+}
+
+.social-right-hero {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 2vw;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.social-right-hero a {
+  text-decoration: none;
+}
+.social-right-hero a i {
+  color: var(--secondary-color);
+}
+
+/* Responsive Design for Various Screen Widths */
+
+/* Devices with width <= 1199px */
+@media screen and (max-width: 1199px) {
+  .hero-left-title {
+    font-size: 3.2vw;
+  }
+
+  .right-text {
+    font-size: 11vw;
+  }
+  .left-info-link {
+    position: absolute;
+    bottom: 5vw;
+    left: -3.5vw;
+  }
+}
+
+/* Devices with width <= 999px */
+@media screen and (max-width: 999px) {
+  .hero-left-title {
+    font-size: 3vw;
+  }
+
+  .right-text {
+    margin-left: -6px;
+    font-size: 10vw;
+  }
+  .left-info-link {
+    position: absolute;
+    bottom: 6vw;
+    left: -4.5vw;
+  }
+  .left-info-link a {
+    color: var(--white);
+  }
+  .social-right-hero a i {
+    font-size: 2vw;
+  }
+}
+
+/* Devices with width <= 768px */
+@media screen and (max-width: 768px) {
+  .hero-left-title {
+    font-size: 5vw;
+  }
+
+  .right-text {
+    margin-left: -6.2px;
+    font-size: 14vw;
+  }
+  .left-info-link {
+    position: absolute;
+    bottom: 7.5vw;
+    left: -6.5vw;
+  }
+  .left-info-link a {
+    color: var(--white);
+  }
+  .social-right-hero a i {
+    font-size: 3.5vw;
+  }
+}
+
+/* Devices with width <= 599px */
+@media screen and (max-width: 599px) {
+  .hero-left-content {
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .hero-left-title {
+    font-size: 6vw;
+    width: 100%;
+    margin-right: 7px;
+    padding-left: 0;
+    padding-bottom: 2vw;
+  }
+
+  .hero-right-overlay {
+    width: 100%;
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .right-text {
+    font-size: 14vw;
+    line-height: 1;
+    text-align: left;
+    margin-left: -16vw;
+  }
+  .left-info-link {
+    position: absolute;
+    bottom: 10vw;
+    left: -8vw;
+  }
+  .left-info-link a {
+    color: var(--white);
+  }
+  .social-right-hero a i {
+    font-size: 3.5vw;
+  }
+}
+
+/* Devices with width <= 499px */
+@media screen and (max-width: 499px) {
+  .hero-left--title {
+    font-size: 6vw;
+  }
+
+  .right-text {
+    font-size: 14vw;
+  }
+  .left-info-link {
+    position: absolute;
+    bottom: 11vw;
+    left: -10vw;
+  }
+  .left-info-link a {
+    color: var(--white);
+  }
+  .social-right-hero a i {
+    font-size: 3.5vw;
+  }
+}
+
+@media  screen and (max-width:449px){
+  .left-info-link {
+    position: absolute;
+    display: none;
+  }
+}
+
+/* Devices with width <= 399px */
+@media screen and (max-width: 399px) {
+  .navbar a div {
+    display: none;
+  }
+  .navbar a img,
+  .navbar.toggle-menu img {
+    width: 7.3vw;
+    height: auto;
+  }
+  .hero-left-title {
+    font-size: 6vw;
+  }
+
+  .right-text {
+    font-size: 14.5vw;
+  }
+  .left-info-link {
+    position: absolute;
+    display: none;
+  }
+  .social-right-hero {
+    display: none;
+  }
+}
+
+/* Devices with width <= 349px */
+@media screen and (max-width: 349px) {
+  .hero-left-title {
+    font-size: 6vw;
+  }
+
+  .right-text {
+    font-size: 14.5vw;
+  }
+  .left-info-link {
+    position: absolute;
+    display: none;
+  }
+  .social-right-hero {
+    display: none;
+  }
+}
+
+/* Devices with width <= 319px */
+@media screen and (max-width: 320px) {
+  .hero-left-title {
+    font-size: 6vw;
+  }
+
+  .right-text {
+    font-size: 14.5vw;
+  }
+  .left-info-link {
+    position: absolute;
+    display: none;
+  }
+  .social-right-hero {
+    display: none;
+  }
+}
+
+/* Hero Section Css Ends Heree... */
+
+/* Products Section Start Here.... */
+.home-products {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-gray);
+  padding-bottom: 3.5vw;
+}
+
+.home-products .product-head {
+  text-align: center;
+  margin: 2vw;
+}
+
+.product-head h2 {
+  margin-top: 2.5vw;
+  font-size: 34px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  font-family: goodTimes;
+}
+/* slider css start */
+.product-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 85%;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.product-slide {
+  flex: 1 0 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-slide .prod-img img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.product-slide .prod-details {
+  background: var(--secondary-color);
+  padding: 3.5vw;
+  margin: -12vw 5vw 5vw 5vw;
+}
+
+.prod-details h3 {
+  color: var(--white);
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 1.8vw;
+  font-family: goodTimes;
+}
+
+.prod-details p {
+  color: var(--white);
+  font-size: 20px;
+  margin-bottom: 2vw;
+  font-family: mundial;
+}
+
+.prod-details a {
+  text-decoration: none;
+}
+
+.prod-details a button {
+  background: var(--white);
+  color: var(--secondary-color);
+  font-weight: 900;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  font-family: goodTimes;
+  font-size: 16px;
+ }
+
+.product-more{
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+}
+
+.product-more a{
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+.product-more a button{
+  background: var(--secondary-color);
+  color: var(--white);
+  font-weight: 900;
+  padding: 10px 25px;
+  border: 2px solid var(--secondary-color);
+  cursor: pointer;
+  font-family: goodTimes;
+  font-size: 16px;
+}
+
+.product-more a button:hover{
+  color: var(--secondary-color);
+  background: var(--white);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* slider css End */
+/* General Styles for Larger Screens */
+
+.home-products {
+  padding-bottom: 3.5vw;
+}
+
+.product-head h2 {
+  font-size: 40px;
+}
+
+
+
+
+/* Media Queries */
+
+/* For screens 1199px and below */
+@media (max-width: 1199px) {
+  .product-head h2 {
+    font-size: 36px;
+  }
+  .prod-details h3 {
+    font-size: 26px;
+  }
+  .prod-details p {
+    font-size: 18px;
+  }
+  .prod-details a button, .product-more a button {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+}
+
+/* For screens 999px and below */
+@media (max-width: 999px) {
+  .product-head h2 {
+    font-size: 32px;
+  }
+  .prod-details h3 {
+    font-size: 22px;
+  }
+  .prod-details p {
+    font-size: 14px;
+  }
+  .prod-details a button, .product-more a button {
+    font-size: 12px;
+    padding: 7px 18px;
+  }
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+  .product-head h2 {
+    font-size: 30px;
+    margin-bottom: 7px;
+  }
+  .prod-details h3 {
+    font-size: 20px;
+  }
+  .prod-details p {
+    font-size: 14px;
+  }
+  .prod-details a button, .product-more a button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* For screens 599px and below */
+@media (max-width: 599px) {
+  .home-products {
+    flex-direction: column;
+  }
+
+  .product-head h2 {
+    font-size: 24px;
+  }
+  .prod-details{
+    margin-top: -4rem !important;
+  }
+  .prod-details h3 {
+    font-size: 18px;
+  }
+  .prod-details p {
+    font-size: 12px;
+  }
+  .prod-details a button, .product-more a button {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+}
+
+/* For screens 499px and below */
+@media (max-width: 499px) {
+  .product-head h2 {
+    font-size: 26px;
+  }
+  .prod-details{
+    margin-top: -4rem !important;
+  }
+  .prod-details h3 {
+    font-size: 16px;
+  }
+  .prod-details p {
+    font-size: 10px;
+    word-spacing: 2px;
+  }
+  .prod-details a button, .product-more a button {
+    font-size: 8px;
+    padding: 4px 10px;
+  }
+}
+
+
+
+/* For screens 399px and below */
+@media (max-width: 399px) {
+  .product-head h2 {
+    font-size: 24px;
+  }
+  .prod-details h3 {
+    font-size: 14px;
+  }
+  .prod-details p {
+    font-size: 8px;
+    word-spacing: 2px;
+  }
+  .prod-details a button, .product-more a button {
+    font-size: 8px;
+    padding: 3px 9px;
+  }
+}
+
+/* For screens 349px and below */
+@media (max-width: 349px) {
+  .product-head h2 {
+    font-size: 22px;
+  }
+  .prod-details h3 {
+    font-size: 12px;
+  }
+  .prod-details p {
+    font-size: 8px;
+    word-spacing: 2px;
+  }
+  .prod-details a button, .product-more a button {
+    font-size: 8px;
+    padding: 2px 8px;
+  }
+}
+
+/* For screens 320px and below */
+@media (max-width: 320px) {
+  .product-head h2 {
+    font-size: 20px;
+  }
+  .prod-details h3 {
+    font-size: 10px;
+  }
+  .prod-details p {
+    font-size: 7px;
+  }
+  .prod-details a button, .product-more a button {
+    font-size: 5px;
+    padding: 2px 5px;
+  }
+}
+
+/* Products Section Endsss Here.... */
+
+/* Services section Start Heree... */
+.home-services{
+  padding-top: 1.5vw;
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+}
+
+
+.service-head{
+  display: flex;
+  justify-content: left;
+  padding-left: 3.5vw;
+}
+
+.service-head h3{
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: .5vw;
+  font-family: goodTimes;
+}
+
+.service-container{
+  padding: 0vw 2vw;
+  margin-top: 2vw;
+}
+.service-item{
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  margin-bottom: 2vw;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease-in-out;
+
+}
+.service-left{
+  width: 55%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.service-left .counter{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5vw;
+}
+.counter span{
+  color: var(--secondary-color);
+}
+.counter span svg{
+  fill: var(--steel);
+}
+
+.serv-item-head{
+  margin-bottom: 2.5vw;
+}
+.serv-item-head h4{
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 1.3vw;
+  font-family: goodTimes;
+}
+.serv-item-head p{
+  width: 80%;
+  font-size: 18px;
+  color: var(--steel);
+  margin-bottom: 2.5vw;
+}
+.btn-wrap-serv{
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  position: relative;
+  width: 100%;  
+  position: relative;
+  display: inline-block;
+}
+
+.rotate-img {
+  transition: transform 0.5s ease;
+}
+
+.btn-wrap-serv:hover .rotate-img {
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+
+.serv-navigation{
+  position: absolute;
+  top: 38%;
+  left: 5.5%;
+}
+.serv-navigation a{
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 800;
+}
+
+.service-right{
+  width: 45%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  margin-bottom: 3vw;
+}
+.service-right img{
+  width: 100%;
+  height: 70%;
+  object-fit: contain;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For screens 1199px and below */
+@media (max-width: 1199px) {
+  .service-head h3 {
+    font-size: 36px;
+  }
+
+  .service-left {
+    width: 60%;
+  }
+
+  .service-right {
+    width: 40%;
+  }
+
+  .service-item {
+    height: auto; /* Adjust height to fit content */
+  }
+}
+
+/* For screens 999px and below */
+@media (max-width: 999px) {
+  .service-head h3 {
+    font-size: 32px;
+  }
+
+  .service-left {
+    width: 70%;
+  }
+
+  .service-right {
+    width: 30%;
+  }
+
+  .service-item {
+    margin-bottom: 1.5vw;
+  }
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+  .service-head h3 {
+    font-size: 28px;
+  }
+
+  .service-left {
+    width: 80%;
+  }
+
+  .service-right {
+    width: 20%;
+  }
+
+  .service-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-right img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+/* For screens 599px and below */
+@media (max-width: 599px) {
+  .service-head h3 {
+    font-size: 24px;
+  }
+
+  .service-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .service-right {
+    width: 100%;
+  }
+
+  .service-item {
+    margin-bottom: 2vw;
+  }
+
+  .service-right img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* For screens 499px and below */
+@media (max-width: 499px) {
+  .service-head h3 {
+    font-size: 20px;
+  }
+
+  .counter {
+    font-size: 16px;
+  }
+
+  .serv-item-head h4 {
+    font-size: 24px;
+  }
+
+  .serv-item-head p {
+    font-size: 16px;
+  }
+
+  .btn-wrap-serv {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+  }
+
+  .rotate-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* For screens 399px and below */
+@media (max-width: 399px) {
+  .service-head h3 {
+    font-size: 18px;
+  }
+
+  .counter {
+    font-size: 14px;
+  }
+
+  .serv-item-head h4 {
+    font-size: 20px;
+  }
+
+  .serv-item-head p {
+    font-size: 14px;
+  }
+
+  .btn-wrap-serv {
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+  }
+
+  .rotate-img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* For screens 349px and below */
+@media (max-width: 349px) {
+  .service-head h3 {
+    font-size: 16px;
+  }
+
+  .counter {
+    font-size: 12px;
+  }
+
+  .serv-item-head h4 {
+    font-size: 18px;
+  }
+
+  .serv-item-head p {
+    font-size: 12px;
+  }
+
+  .btn-wrap-serv {
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+  }
+
+  .rotate-img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* For screens 320px and below */
+@media (max-width: 320px) {
+  .service-head h3 {
+    font-size: 14px;
+  }
+
+  .counter {
+    font-size: 10px;
+  }
+
+  .serv-item-head h4 {
+    font-size: 16px;
+  }
+
+  .serv-item-head p {
+    font-size: 10px;
+  }
+
+  .btn-wrap-serv {
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+  }
+
+  .rotate-img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+
+/* Services section Endss Heree... */

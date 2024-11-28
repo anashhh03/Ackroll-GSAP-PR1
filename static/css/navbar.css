@@ -1,0 +1,394 @@
+/* Header Styles */
+header {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    z-index: 999;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent !important;
+    padding: 10px 25px;
+}
+
+.navbar a img {
+    width: 4.5vw;
+    height: auto;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar a div {
+    display: flex;
+    align-items: center;
+    font-size: 1.8vw;
+    font-weight: 900;
+    background-image: linear-gradient(to right, var(--white) 50%, var(--secondary-color) 50%);
+    font-family: goodTimes;
+    margin-left: 4.9vw;
+    /* -webkit-background-clip:text; */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Toggle Menu Styles */
+.toggle-menu {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.toggle-menu span {
+    font-family: goodTimes;
+    font-weight: 600;
+    font-size: 1.5vw;
+    background-image: linear-gradient(to right, var(--steel) 40%, var(--secondary-color) 60%);
+    /* -webkit-background-clip: text; */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.toggle-menu img {
+    width: 3vw;
+    height: auto;
+}
+
+/* Menu Container Styles */
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: transparent !important;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
+}
+
+.menu-container.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu-contents {
+    width: 0%;
+    display: flex;
+    color: white;
+    overflow: hidden;
+    transition: width 0.5s ease;
+}
+
+.menu-container.active .menu-contents {
+    width: 98%;
+    height: 90%;
+    max-width: 1200px;
+}
+
+.menu-left-content, .menu-right-content {
+    opacity: 0;
+    transition: opacity 0.5s ease 0.5s;
+}
+
+.menu-left-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-text h3 {
+    font-family: goodTimes;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.menu-left-content .social-links h4 {
+    font-size: 28px;
+    font-weight: 590;
+    margin-bottom: 10px;
+    color: var(--secondary-color) !important;
+}
+
+.social-links .socials {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.socials a i {
+    color: var(--secondary-color) !important;
+    font-size: 1.7rem;
+}
+
+/* Menu Right Content */
+.menu-right-content {
+    width: 100%;
+    height: auto;
+    text-align: right;
+}
+
+/* Navigation Links */
+.navigation-links {
+    position: absolute;
+    right: 7vw;
+    top: 5vw;
+}
+.navigation-links a h4:hover{
+    transform: rotateX(360deg);
+}
+
+.navigation-links a h4 {
+    font-family: goodTimes;
+    font-size: 26px;
+    font-weight: 600;
+    transition: all .9s ease-in-out;
+}
+
+.menu-left-content.active, .menu-right-content.active {
+    opacity: 1;
+}
+
+/* Menu Backdrop */
+.menu-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    z-index: -1;
+}
+
+/* Menu Close Button */
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+/* Social Links */
+.social-links, .navigation-links {
+    margin: 20px 0;
+}
+
+.social-links a, .navigation-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    transition: color 0.3s;
+}
+
+.navigation-links a h4:hover {
+    color: var(--steel);
+    transition: 0.3s ease;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1199px) {
+    .navbar a img {
+        width: 5vw;
+    }
+    .navbar a div {
+        font-size: 2vw;
+        margin-left: 3.9vw;
+    }
+    .toggle-menu span {
+        font-size: 1.4vw;
+    }
+}
+
+@media (max-width: 999px) {
+    .navbar a img {
+        width: 6vw;
+    }
+    .navbar a div {
+        font-size: 1.5vw;
+        margin-left: 3vw;
+    }
+    .toggle-menu span {
+        font-size: 1.3vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar a img {
+        width: 7vw;
+    }
+    .navbar a div{
+        margin-left: 2.35rem;
+        font-size: 1.3rem;
+    }
+    .navbar .toggle-menu span{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 599px) {
+    .navbar a div{
+        font-size: 1.2rem;
+        margin-left: 4.65rem;
+    }
+    .navbar a img,
+    .navbar .toggle-menu img{
+        width: 5.5vw;
+        height: auto;
+    }
+    
+    .toggle-menu span {
+        font-size: 1.1vw;
+    }
+    .menu-left-content.active .logo-menu img{
+        /* display: none; */
+        margin-top: 5rem;
+        height: 150px !important;
+        width: auto;
+    }
+    .menu-text h3{
+        position: absolute;
+        top: 5vw;
+        left: 3vw;
+        font-size: 1.5rem;
+    }
+    .menu-left-content .social-links h4{
+        font-size: 1.7rem;
+    }
+    .socials a i{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 499px) {
+    .navbar a div {
+        font-size: 3.5vw;
+        margin-left: 4.65rem;
+    }
+    .toggle-menu span {
+        font-size: 1vw;
+    }
+    .menu-right-content .navigation-links a h4{
+        font-size: 1.3rem;
+    }
+
+    .menu-left-content.active .logo-menu img{
+        /* display: none; */
+        margin-top: 6rem;
+        height: 150px !important;
+        width: auto;
+    }
+}
+
+
+@media (max-width: 399px) {
+    .navbar a div {
+        font-size: 1.1vw;
+    }
+    .toggle-menu span {
+        font-size: 0.9vw;
+    }
+    .social-links{
+        position: absolute;
+        bottom: 2vw;
+        left: 1.5vw;
+    }
+    .menu-left-content .social-links h4{
+        font-size: 1.5rem;
+    }
+    .menu-left-content .menu-text h3{
+        font-size: 20px;
+    }
+    .socials a i{
+        font-size: 1.2rem;
+        display: flex;
+        gap: 5px;
+    }
+    .navigation-links{
+        margin-top: 3rem;
+    }
+    .menu-right-content .navigation-links a h4{
+        font-size: 1.3rem;
+    }
+    .menu-left-content.active .logo-menu img{
+        position: absolute;
+        bottom: 2rem !important;
+        right: 3rem !important;
+        height: 75px !important;
+        width: auto;
+    }
+    .menu-contents .menu-close{
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+}
+
+@media (max-width: 349px) {
+    .navbar a div {
+        font-size: 1vw;
+    }
+    .toggle-menu span {
+        font-size: 0.8vw;
+    }
+    .menu-right-content .navigation-links a h4{
+        font-size: 1.1rem;
+    }
+    .menu-left-content .social-links h4{
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+    .socials a i{
+        font-size: 1rem;
+        display: flex;
+        gap: 5px;
+    }
+    .menu-left-content.active .logo-menu img{
+        display: none;
+    }
+}
+
+@media (max-width: 319px) {
+    .navbar a div {
+        font-size: 0.9vw;
+    }
+    .toggle-menu span {
+        font-size: 0.7vw;
+    }
+    .menu-text h3{
+        font-size: 1.2rem;
+    }
+    .menu-left-content.active .logo-menu img{
+        display: none;
+    }
+}
